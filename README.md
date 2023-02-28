@@ -4,4 +4,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/61ab451cd9cf8195d1cb/maintainability)](https://codeclimate.com/github/olya889/frontend-project-44/maintainability)
 
-[![asciicast](https://asciinema.org/a/Gt5jTiMvZlVTtpauc7amH0VKf.svg)](https://asciinema.org/a/Gt5jTiMvZlVTtpauc7amH0VKf)
+<script async id="asciicast-562878" src="https://asciinema.org/a/562878.js"></script>
+
+<script async id="asciicast-563627" src="https://asciinema.org/a/563627.js"></script>
