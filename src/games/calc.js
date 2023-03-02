@@ -26,10 +26,10 @@ const calculatorGame = () => {
     const operators = ['+', '-', '*'];
     for (let i = 0; i <= 2; i += 1) {
       const firstRandomNumb = Math.round((Math.random() * 10));
-      const SecondRandomNumb = Math.round((Math.random() * 10));
+      const secondRandomNumb = Math.round((Math.random() * 10));
       const randomOperator = getRandomOperator(operators);
-      const randomOperation = `${firstRandomNumb} ${randomOperator} ${SecondRandomNumb}`;
-      const rightAns = String(getRightAnswer(firstRandomNumb, randomOperator, SecondRandomNumb));
+      const randomOperation = `${firstRandomNumb} ${randomOperator} ${secondRandomNumb}`;
+      const rightAns = String(getRightAnswer(firstRandomNumb, randomOperator, secondRandomNumb));
       questionsAndRightAnswers.push([randomOperation, rightAns]);
     }
     return questionsAndRightAnswers;
