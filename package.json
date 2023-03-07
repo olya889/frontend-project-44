@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/olya889/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/olya889/frontend-project-44/actions)",
+  "description": "Brain Game is a set of 5 console games, each one expecting 3 right answers on 3 questions",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
