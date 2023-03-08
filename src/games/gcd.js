@@ -2,7 +2,7 @@ import startGame from '../index.js';
 
 const gcdGame = () => {
   const task = 'Find the greatest common divisor of given numbers.';
-  const getGCB = (a, b) => {
+  const getGCD = (a, b) => {
     let maxNumber = Math.max(a, b);
     let minNumber = Math.min(a, b);
     let greatestCommonDivisor;
@@ -25,7 +25,7 @@ const gcdGame = () => {
       const firstRandomNumb = Math.ceil((Math.random() * 10));
       const secondRandomNumb = Math.ceil((Math.random() * 10));
       const question = `${firstRandomNumb} ${secondRandomNumb}`;
-      const rightAns = String(getGCB(firstRandomNumb, secondRandomNumb));
+      const rightAns = String(getGCD(firstRandomNumb, secondRandomNumb));
       questionsAndRightAnswers.push([question, rightAns]);
     }
     return questionsAndRightAnswers;
