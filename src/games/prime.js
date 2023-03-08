@@ -4,12 +4,12 @@ const primeGame = () => {
   const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const isPrime = (number) => {
     if (number < 2) {
-      return 'yes';
+      return true;
     }
     let divider = 2;
     while (divider <= number / 2) {
       if (number % divider === 0) {
-        return 'no';
+        return false;
       }
       divider += 1;
     }
@@ -20,7 +20,7 @@ const primeGame = () => {
     for (let i = 0; i < 3; i += 1) {
       const randomNumber = Math.ceil((Math.random() * 10));
       const question = randomNumber;
-      const rightAns = (isPrime(question));
+      const rightAns = isPrime(question) ? 'yes' : 'no';
       questionsAndRightAnswers.push([question, rightAns]);
     }
     return questionsAndRightAnswers;
