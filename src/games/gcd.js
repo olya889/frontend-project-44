@@ -20,19 +20,15 @@ const gcdGame = () => {
   };
 
   const getQuestionsAndRightAnswers = () => {
-    const questionsAndRightAnswers = [];
-    for (let i = 0; i < 3; i += 1) {
-      const firstRandomNumb = Math.ceil((Math.random() * 10));
-      const secondRandomNumb = Math.ceil((Math.random() * 10));
-      const question = `${firstRandomNumb} ${secondRandomNumb}`;
-      const rightAns = String(getGCD(firstRandomNumb, secondRandomNumb));
-      questionsAndRightAnswers.push([question, rightAns]);
-    }
+    const firstRandomNumb = Math.ceil((Math.random() * 10));
+    const secondRandomNumb = Math.ceil((Math.random() * 10));
+    const question = `${firstRandomNumb} ${secondRandomNumb}`;
+    const rightAns = String(getGCD(firstRandomNumb, secondRandomNumb));
+    const questionsAndRightAnswers = [question, rightAns];
     return questionsAndRightAnswers;
   };
-  const questionsAndRightAnswers = getQuestionsAndRightAnswers();
 
-  startGame(task, questionsAndRightAnswers);
+  startGame(task, getQuestionsAndRightAnswers);
 };
 
 export default gcdGame;

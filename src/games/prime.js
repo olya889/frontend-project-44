@@ -16,17 +16,13 @@ const primeGame = () => {
     return 'yes';
   };
   const getQuestionsAndRightAnswers = () => {
-    const questionsAndRightAnswers = [];
-    for (let i = 0; i < 3; i += 1) {
-      const randomNumber = Math.ceil((Math.random() * 10));
-      const question = randomNumber;
-      const rightAns = isPrime(question) ? 'yes' : 'no';
-      questionsAndRightAnswers.push([question, rightAns]);
-    }
+    const question = Math.ceil(Math.random() * 10);
+    const rightAns = isPrime(question) ? 'yes' : 'no';
+    const questionsAndRightAnswers = [question, rightAns];
     return questionsAndRightAnswers;
   };
-  const questionsAndRightAnswers = getQuestionsAndRightAnswers();
-  startGame(task, questionsAndRightAnswers);
+
+  startGame(task, getQuestionsAndRightAnswers);
 };
 
 export default primeGame;

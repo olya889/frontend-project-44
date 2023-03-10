@@ -15,21 +15,16 @@ const progressionGame = () => {
   };
 
   const getQuestionsAndRightAnswers = () => {
-    const questionsAndRightAnswers = [];
-    for (let i = 0; i < 3; i += 1) {
-      const set = getRandomSet();
-      const randomItem = Math.floor(Math.random() * set.length);
-      const rightAns = String(set[randomItem]);
-      set[randomItem] = '..';
-      const question = set.join(' ');
-      questionsAndRightAnswers.push([question, rightAns]);
-    }
+    const set = getRandomSet();
+    const randomItem = Math.floor(Math.random() * set.length);
+    const rightAns = String(set[randomItem]);
+    set[randomItem] = '..';
+    const question = set.join(' ');
+    const questionsAndRightAnswers = [question, rightAns];
     return questionsAndRightAnswers;
   };
 
-  const questionsAndRightAnswers = getQuestionsAndRightAnswers();
-
-  startGame(task, questionsAndRightAnswers);
+  startGame(task, getQuestionsAndRightAnswers);
 };
 
 export default progressionGame;

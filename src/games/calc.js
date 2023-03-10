@@ -22,22 +22,17 @@ const calculatorGame = () => {
   };
 
   const getQuestionsAndRightAnswers = () => {
-    const questionsAndRightAnswers = [];
     const operators = ['+', '-', '*'];
-    for (let i = 0; i <= 2; i += 1) {
-      const firstRandomNumb = Math.round((Math.random() * 10));
-      const secondRandomNumb = Math.round((Math.random() * 10));
-      const randomOperator = getRandomOperator(operators);
-      const randomOperation = `${firstRandomNumb} ${randomOperator} ${secondRandomNumb}`;
-      const rightAns = String(getRightAnswer(firstRandomNumb, randomOperator, secondRandomNumb));
-      questionsAndRightAnswers.push([randomOperation, rightAns]);
-    }
+    const firstRandomNumb = Math.round((Math.random() * 10));
+    const secondRandomNumb = Math.round((Math.random() * 10));
+    const randomOperator = getRandomOperator(operators);
+    const question = `${firstRandomNumb} ${randomOperator} ${secondRandomNumb}`;
+    const rightAns = String(getRightAnswer(firstRandomNumb, randomOperator, secondRandomNumb));
+    const questionsAndRightAnswers = [question, rightAns];
     return questionsAndRightAnswers;
   };
 
-  const questionsAndRightAnswers = getQuestionsAndRightAnswers();
-
-  startGame(task, questionsAndRightAnswers);
+  startGame(task, getQuestionsAndRightAnswers);
 };
 
 export default calculatorGame;
