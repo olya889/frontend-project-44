@@ -12,7 +12,7 @@ const isPrime = (number) => {
     }
     divider += 1;
   }
-  return 'yes';
+  return true;
 };
 const getQuestionsAndRightAnswers = () => {
   const question = Math.ceil(getRandomNumber() * 10);
