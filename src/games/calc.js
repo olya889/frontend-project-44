@@ -9,10 +9,10 @@ const getRandomOperator = (operatorsList) => {
 
 const getCalculationResult = (firstNumber, operator, seconNumber) => {
   if (operator === '+') {
-    return firstNumber + seconNumber;
+    return String(firstNumber + seconNumber);
   } if (operator === '-') {
-    return firstNumber - seconNumber;
-  } return firstNumber * seconNumber;
+    return String(firstNumber - seconNumber);
+  } return String(firstNumber * seconNumber);
 };
 
 const getQuestionsAndRightAnswers = () => {
@@ -21,7 +21,7 @@ const getQuestionsAndRightAnswers = () => {
   const secondRandomNumber = Math.round((getRandomNumber() * 10));
   const randomOperator = getRandomOperator(operators);
   const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
-  const rightAnswer = String(getCalculationResult(firstRandomNumber, randomOperator, secondRandomNumber));
+  const rightAnswer = getCalculationResult(firstRandomNumber, randomOperator, secondRandomNumber);
   const questionsAndRightAnswers = [question, rightAnswer];
   return questionsAndRightAnswers;
 };
