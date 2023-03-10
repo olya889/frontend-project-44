@@ -1,9 +1,10 @@
 import startGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const getRandomOperator = (operatorsList) => {
   const min = 0;
   const max = operatorsList.length;
-  return operatorsList[Math.floor(Math.random() * (max - min) + min)];
+  return operatorsList[Math.floor(getRandomNumber() * (max - min) + min)];
 };
 
 const getCalculationResult = (firstNumber, operator, seconNumber) => {
@@ -16,12 +17,12 @@ const getCalculationResult = (firstNumber, operator, seconNumber) => {
 
 const getQuestionsAndRightAnswers = () => {
   const operators = ['+', '-', '*'];
-  const firstRandomNumb = Math.round((Math.random() * 10));
-  const secondRandomNumb = Math.round((Math.random() * 10));
+  const firstRandomNumber = Math.round((getRandomNumber() * 10));
+  const secondRandomNumber = Math.round((getRandomNumber() * 10));
   const randomOperator = getRandomOperator(operators);
-  const question = `${firstRandomNumb} ${randomOperator} ${secondRandomNumb}`;
-  const rightAns = String(getCalculationResult(firstRandomNumb, randomOperator, secondRandomNumb));
-  const questionsAndRightAnswers = [question, rightAns];
+  const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+  const rightAnswer = String(getCalculationResult(firstRandomNumber, randomOperator, secondRandomNumber));
+  const questionsAndRightAnswers = [question, rightAnswer];
   return questionsAndRightAnswers;
 };
 

@@ -1,3 +1,3 @@
-const getRandomNumber = () => Math.random() * 10;
+const getRandomNumber = () => Math.random();
 
-export default getRandomNumber();
+export default getRandomNumber;

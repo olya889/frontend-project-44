@@ -1,9 +1,10 @@
 import startGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const getQuestionsAndRightAnswers = () => {
-  const question = Math.round((Math.random() * 10));
-  const rightAns = question % 2 === 0 ? 'yes' : 'no';
-  const questionsAndRightAnswers = [question, rightAns];
+  const question = Math.round((getRandomNumber() * 10));
+  const rightAnswer = question % 2 === 0 ? 'yes' : 'no';
+  const questionsAndRightAnswers = [question, rightAnswer];
   return questionsAndRightAnswers;
 };
 

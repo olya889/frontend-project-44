@@ -1,4 +1,5 @@
 import startGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const getGCD = (a, b) => {
   let maxNumber = Math.max(a, b);
@@ -18,11 +19,11 @@ const getGCD = (a, b) => {
 };
 
 const getQuestionsAndRightAnswers = () => {
-  const firstRandomNumb = Math.ceil((Math.random() * 10));
-  const secondRandomNumb = Math.ceil((Math.random() * 10));
-  const question = `${firstRandomNumb} ${secondRandomNumb}`;
-  const rightAns = String(getGCD(firstRandomNumb, secondRandomNumb));
-  const questionsAndRightAnswers = [question, rightAns];
+  const firstRandomNumber = Math.ceil((getRandomNumber() * 10));
+  const secondRandomNumber = Math.ceil((getRandomNumber() * 10));
+  const question = `${firstRandomNumber} ${secondRandomNumber}`;
+  const rightAnswer = String(getGCD(firstRandomNumber, secondRandomNumber));
+  const questionsAndRightAnswers = [question, rightAnswer];
   return questionsAndRightAnswers;
 };
 

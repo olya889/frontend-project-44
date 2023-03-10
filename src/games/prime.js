@@ -1,4 +1,5 @@
 import startGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -14,9 +15,9 @@ const isPrime = (number) => {
   return 'yes';
 };
 const getQuestionsAndRightAnswers = () => {
-  const question = Math.ceil(Math.random() * 10);
-  const rightAns = isPrime(question) ? 'yes' : 'no';
-  const questionsAndRightAnswers = [question, rightAns];
+  const question = Math.ceil(getRandomNumber() * 10);
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
+  const questionsAndRightAnswers = [question, rightAnswer];
   return questionsAndRightAnswers;
 };
 const primeGame = () => {
