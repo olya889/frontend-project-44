@@ -21,6 +21,7 @@ const getQuestionsAndRightAnswers = () => {
   const secondRandomNumber = Math.round((getRandomNumber() * 10));
   const randomOperator = getRandomOperator(operators);
   const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+  // eslint-disable-next-line max-len
   const rightAnswer = String(getCalculationResult(firstRandomNumber, randomOperator, secondRandomNumber));
   const questionsAndRightAnswers = [question, rightAnswer];
   return questionsAndRightAnswers;
