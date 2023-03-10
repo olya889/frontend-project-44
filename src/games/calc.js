@@ -6,16 +6,12 @@ const getRandomOperator = (operatorsList) => {
   return operatorsList[Math.floor(Math.random() * (max - min) + min)];
 };
 
-const getRightAnswer = (firstNumber, operator, seconNumber) => {
-  let result;
+const getCalculationResult = (firstNumber, operator, seconNumber) => {
   if (operator === '+') {
-    result = firstNumber + seconNumber;
-  } else if (operator === '-') {
-    result = firstNumber - seconNumber;
-  } else if (operator === '*') {
-    result = firstNumber * seconNumber;
-  }
-  return result;
+    return firstNumber + seconNumber;
+  } if (operator === '-') {
+    return firstNumber - seconNumber;
+  } return firstNumber * seconNumber;
 };
 
 const getQuestionsAndRightAnswers = () => {
@@ -24,7 +20,7 @@ const getQuestionsAndRightAnswers = () => {
   const secondRandomNumb = Math.round((Math.random() * 10));
   const randomOperator = getRandomOperator(operators);
   const question = `${firstRandomNumb} ${randomOperator} ${secondRandomNumb}`;
-  const rightAns = String(getRightAnswer(firstRandomNumb, randomOperator, secondRandomNumb));
+  const rightAns = String(getCalculationResult(firstRandomNumb, randomOperator, secondRandomNumb));
   const questionsAndRightAnswers = [question, rightAns];
   return questionsAndRightAnswers;
 };
