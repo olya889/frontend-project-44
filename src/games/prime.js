@@ -3,7 +3,7 @@ import getRandomNumber from '../utils.js';
 
 const isPrime = (number) => {
   if (number < 2) {
-    return true;
+    return false;
   }
   let divider = 2;
   while (divider <= number / 2) {
@@ -15,7 +15,7 @@ const isPrime = (number) => {
   return true;
 };
 const getQuestionsAndRightAnswers = () => {
-  const question = Math.ceil(getRandomNumber() * 10);
+  const question = Math.round(getRandomNumber() * 10);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   const questionsAndRightAnswers = [question, rightAnswer];
   return questionsAndRightAnswers;
