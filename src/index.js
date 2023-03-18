@@ -5,19 +5,17 @@ const startGame = (task, getQuestionsAndRightAnswers) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(task);
-  let i = 0;
-  while (i < 3) {
-    const questionsAndRightAnswers = getQuestionsAndRightAnswers();
-    console.log(`Question: ${questionsAndRightAnswers[0]}`);
+  for (let i = 0; i < 3; i += 1) {
+    const [question, rightAnswer] = getQuestionsAndRightAnswers();
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer === questionsAndRightAnswers[1]) {
+    if (answer === rightAnswer) {
       console.log('Correct!');
-      i += 1;
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${questionsAndRightAnswers[1]}'.\nLet's try again, ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
       break;
     }
-    if (i === 3) {
+    if (i === 2) {
       console.log(`Congratulations, ${name}!`);
     }
   }
