@@ -8,12 +8,24 @@ const getRandomOperator = (operatorsList) => {
 };
 
 const getCalculationResult = (firstNumber, operator, seconNumber) => {
-  if (operator === '+') {
+  switch (operator) {
+    case '+':
+      return firstNumber + seconNumber;
+    case '-':
+      return firstNumber - seconNumber;
+    case '*':
+      return firstNumber * seconNumber;
+    default:
+      throw new Error(`Unknown operator: '${operator}'!`);
+  }
+};
+
+/* if (operator === '+') {
     return firstNumber + seconNumber;
   } if (operator === '-') {
     return firstNumber - seconNumber;
   } return firstNumber * seconNumber;
-};
+}; */
 
 const getQuestionsAndRightAnswers = () => {
   const operators = ['+', '-', '*'];
