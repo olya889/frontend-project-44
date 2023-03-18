@@ -19,8 +19,7 @@ const getQuestionsAndRightAnswers = () => {
   const rightAnswer = String(set[randomItem]);
   set[randomItem] = '..';
   const question = set.join(' ');
-  const questionsAndRightAnswers = [question, rightAnswer];
-  return questionsAndRightAnswers;
+  return [question, rightAnswer];
 };
 
 const progressionGame = () => {

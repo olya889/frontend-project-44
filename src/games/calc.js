@@ -35,8 +35,7 @@ const getQuestionsAndRightAnswers = () => {
   const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
   // eslint-disable-next-line max-len
   const rightAnswer = String(getCalculationResult(firstRandomNumber, randomOperator, secondRandomNumber));
-  const questionsAndRightAnswers = [question, rightAnswer];
-  return questionsAndRightAnswers;
+  return [question, rightAnswer];
 };
 
 const calculatorGame = () => {

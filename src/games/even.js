@@ -10,8 +10,7 @@ const isEven = (number) => {
 const getQuestionsAndRightAnswers = () => {
   const question = Math.round((getRandomNumber() * 10));
   const rightAnswer = isEven(question) ? 'yes' : 'no';
-  const questionsAndRightAnswers = [question, rightAnswer];
-  return questionsAndRightAnswers;
+  return [question, rightAnswer];
 };
 
 const evenGame = () => {
