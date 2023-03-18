@@ -1,11 +1,7 @@
 import startGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const isEven = (number) => {
-  if (number % 2 === 0) {
-    return true;
-  } return false;
-};
+const isEven = (number) => number % 2 === 0;
 
 const getQuestionsAndRightAnswers = () => {
   const question = Math.round((getRandomNumber() * 10));
