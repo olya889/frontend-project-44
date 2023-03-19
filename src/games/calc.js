@@ -33,8 +33,9 @@ const getQuestionsAndRightAnswers = () => {
   const secondRandomNumber = Math.round((getRandomNumber() * 10));
   const randomOperator = getRandomOperator(operators);
   const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
-  // eslint-disable-next-line max-len
-  const rightAnswer = String(getCalculationResult(firstRandomNumber, randomOperator, secondRandomNumber));
+  const rightAnswer = String(
+    getCalculationResult(firstRandomNumber, randomOperator, secondRandomNumber),
+  );
   return [question, rightAnswer];
 };
 
