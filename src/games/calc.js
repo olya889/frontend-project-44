@@ -20,13 +20,6 @@ const getCalculationResult = (firstNumber, operator, seconNumber) => {
   }
 };
 
-/* if (operator === '+') {
-    return firstNumber + seconNumber;
-  } if (operator === '-') {
-    return firstNumber - seconNumber;
-  } return firstNumber * seconNumber;
-}; */
-
 const getQuestionsAndRightAnswers = () => {
   const operators = ['+', '-', '*'];
   const firstRandomNumber = Math.round((getRandomNumber() * 10));
