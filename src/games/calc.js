@@ -3,8 +3,8 @@ import getRandomNumber from '../utils.js';
 
 const getRandomOperator = (operatorsList) => {
   const min = 0;
-  const max = operatorsList.length;
-  return operatorsList[Math.floor(getRandomNumber() * (max - min) + min)];
+  const max = operatorsList.length - 1;
+  return operatorsList[Math.floor(getRandomNumber(min, max))];
 };
 
 const getCalculationResult = (firstNumber, operator, seconNumber) => {
@@ -22,8 +22,8 @@ const getCalculationResult = (firstNumber, operator, seconNumber) => {
 
 const getQuestionsAndRightAnswers = () => {
   const operators = ['+', '-', '*'];
-  const firstRandomNumber = Math.round((getRandomNumber() * 10));
-  const secondRandomNumber = Math.round((getRandomNumber() * 10));
+  const firstRandomNumber = Math.round((getRandomNumber()));
+  const secondRandomNumber = Math.round((getRandomNumber()));
   const randomOperator = getRandomOperator(operators);
   const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
   const rightAnswer = String(

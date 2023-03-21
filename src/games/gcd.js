@@ -19,8 +19,8 @@ const getGCD = (a, b) => {
 };
 
 const getQuestionsAndRightAnswers = () => {
-  const firstRandomNumber = Math.ceil((getRandomNumber() * 10));
-  const secondRandomNumber = Math.ceil((getRandomNumber() * 10));
+  const firstRandomNumber = Math.ceil((getRandomNumber()));
+  const secondRandomNumber = Math.ceil((getRandomNumber()));
   const question = `${firstRandomNumber} ${secondRandomNumber}`;
   const rightAnswer = String(getGCD(firstRandomNumber, secondRandomNumber));
   return [question, rightAnswer];
