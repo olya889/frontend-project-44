@@ -2,9 +2,8 @@ import startGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const getRandomOperator = (operatorsList) => {
-  const min = 0;
   const max = operatorsList.length - 1;
-  return operatorsList[Math.floor(getRandomNumber(min, max))];
+  return operatorsList[Math.floor(getRandomNumber(0, max))];
 };
 
 const getCalculationResult = (firstNumber, operator, seconNumber) => {
