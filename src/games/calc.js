@@ -22,8 +22,8 @@ const getCalculationResult = (firstNumber, operator, seconNumber) => {
 
 const getQuestionsAndRightAnswers = () => {
   const operators = ['+', '-', '*'];
-  const firstRandomNumber = Math.round((getRandomNumber()));
-  const secondRandomNumber = Math.round((getRandomNumber()));
+  const firstRandomNumber = Math.round(getRandomNumber());
+  const secondRandomNumber = Math.round(getRandomNumber());
   const randomOperator = getRandomOperator(operators);
   const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
   const rightAnswer = String(
